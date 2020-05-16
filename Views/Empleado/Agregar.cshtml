@@ -1,0 +1,65 @@
+﻿@using LaLucha.Models
+@model EmpleadoCLS
+@{
+    ViewBag.Title = "Agregar Empleado";
+}
+<br />
+<br />
+<h2>Registrar Empleado</h2>
+<br />
+
+<div class="row">
+    <div class="col-md-6">
+
+        @using (Html.BeginForm("Agregar", "Empleado", FormMethod.Post))
+        {
+            <div>
+                @Html.LabelFor(p => p.id)
+                @Html.TextBoxFor(p => p.id, new { @class = "form-control" })
+                @Html.ValidationMessage("id",new { @class="text-danger"})
+            </div><br />
+            <div>
+                @Html.LabelFor(p => p.nombre)
+                @Html.TextBoxFor(p => p.nombre, new { @class = "form-control" })
+                @Html.ValidationMessage("nombre",new { @class="text-danger"})
+            </div><br />
+            <div>
+                @Html.LabelFor(p => p.contra)
+                @Html.TextBoxFor(p => p.contra, new { @class = "form-control" })
+                @Html.ValidationMessage("contra", new { @class = "text-danger" })
+            </div><br />
+                <div>
+                    @Html.LabelFor(p => p.idTipoEmpleado)
+                    @Html.TextBoxFor(p => p.idTipoEmpleado, new { @class = "form-control" })
+                    @Html.ValidationMessage("idTipoEmpleado", new { @class = "text-danger" })
+                </div><br />
+            <div>
+                @Html.LabelFor(p => p.celular)
+                @Html.TextBoxFor(p => p.celular, new { @class = "form-control" })
+                @Html.ValidationMessage("celular", new { @class = "text-danger" })
+            </div><br />
+            <div>
+                @Html.LabelFor(p => p.correo)
+                @Html.TextBoxFor(p => p.correo, new { @class = "form-control" })
+                @Html.ValidationMessage("correo", new { @class = "text-danger" })
+            </div><br />
+            <div>
+                @Html.LabelFor(p => p.direccion)
+                @Html.TextBoxFor(p => p.direccion, new { @class = "form-control" })
+                @Html.ValidationMessage("direccion", new { @class = "text-danger" })
+            </div><br />
+                <div>
+                    @Html.LabelFor(p => p.sueldo)
+                    @Html.TextBoxFor(p => p.sueldo, new { @class = "form-control" })
+                    @Html.ValidationMessage("sueldo", new { @class = "text-danger" })
+                </div><br />
+            
+            <input type="submit" value="Registrar" />
+        }
+
+    </div>
+</div>
+
+
+
+

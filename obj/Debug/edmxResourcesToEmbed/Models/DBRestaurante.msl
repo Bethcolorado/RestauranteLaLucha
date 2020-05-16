@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RestauranteModelStoreContainer" CdmEntityContainer="RestauranteEntities">
+    <EntitySetMapping Name="DBS">
+      <EntityTypeMapping TypeName="RestauranteModel.DBS">
+        <MappingFragment StoreEntitySet="DBS">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IdPedido" ColumnName="IdPedido" />
+          <ScalarProperty Name="MontoTotal" ColumnName="MontoTotal" />
+          <ScalarProperty Name="IdModoDePago" ColumnName="IdModoDePago" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetalleBoleta">
+      <EntityTypeMapping TypeName="RestauranteModel.DetalleBoleta">
+        <MappingFragment StoreEntitySet="DetalleBoleta">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IdPedido" ColumnName="IdPedido" />
+          <ScalarProperty Name="MontoTotal" ColumnName="MontoTotal" />
+          <ScalarProperty Name="IdModoDePago" ColumnName="IdModoDePago" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Empleado">
+      <EntityTypeMapping TypeName="RestauranteModel.Empleado">
+        <MappingFragment StoreEntitySet="Empleado">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Contraseña" ColumnName="Contraseña" />
+          <ScalarProperty Name="IdTipoEmpleado" ColumnName="IdTipoEmpleado" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Celular" ColumnName="Celular" />
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Sueldo" ColumnName="Sueldo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ModoDePago">
+      <EntityTypeMapping TypeName="RestauranteModel.ModoDePago">
+        <MappingFragment StoreEntitySet="ModoDePago">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pedido">
+      <EntityTypeMapping TypeName="RestauranteModel.Pedido">
+        <MappingFragment StoreEntitySet="Pedido">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Atendido" ColumnName="Atendido" />
+          <ScalarProperty Name="Detalle" ColumnName="Detalle" />
+          <ScalarProperty Name="IdEmpleado" ColumnName="IdEmpleado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PPS">
+      <EntityTypeMapping TypeName="RestauranteModel.PPS">
+        <MappingFragment StoreEntitySet="PPS">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
+          <ScalarProperty Name="IdPedido" ColumnName="IdPedido" />
+          <ScalarProperty Name="Observacion" ColumnName="Observacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Producto">
+      <EntityTypeMapping TypeName="RestauranteModel.Producto">
+        <MappingFragment StoreEntitySet="Producto">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdTipoProducto" ColumnName="IdTipoProducto" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="imagen" ColumnName="imagen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Productos_Pedidos">
+      <EntityTypeMapping TypeName="RestauranteModel.Productos_Pedidos">
+        <MappingFragment StoreEntitySet="Productos_Pedidos">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
+          <ScalarProperty Name="IdPedido" ColumnName="IdPedido" />
+          <ScalarProperty Name="Observacion" ColumnName="Observacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PS">
+      <EntityTypeMapping TypeName="RestauranteModel.PS">
+        <MappingFragment StoreEntitySet="PS">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Atendido" ColumnName="Atendido" />
+          <ScalarProperty Name="Detalle" ColumnName="Detalle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="RestauranteModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoEmpleado">
+      <EntityTypeMapping TypeName="RestauranteModel.TipoEmpleado">
+        <MappingFragment StoreEntitySet="TipoEmpleado">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Sueldo" ColumnName="Sueldo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoProducto">
+      <EntityTypeMapping TypeName="RestauranteModel.TipoProducto">
+        <MappingFragment StoreEntitySet="TipoProducto">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

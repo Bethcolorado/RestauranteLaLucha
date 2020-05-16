@@ -1,0 +1,134 @@
+﻿@using LaLucha.Models
+@model ProductoCLS
+@{
+    ViewBag.Title = "Agregar";
+    Layout = "~/Views/Shared/_LayoutCliente.cshtml";
+    List<ProductoCLS> listaPedidos = (List<ProductoCLS>)ViewBag.listaPedidos;
+}
+
+    <div class="col-xs-12 col-sm-9">
+        <h2>Bienvenido cliente </h2>
+
+        @* Hamburguesas*@
+        <a name="tabla1"></a>
+        <table class="table">
+            @using (Html.BeginForm("Agregar", "Pedido", FormMethod.Post))
+            {
+            <tr>
+                <th colspan="3" align="center">
+                    @Html.LabelFor(p=>p.nombre)
+                    @Html.DropDownList("id", (List<SelectListItem>)ViewBag.listHamb, "Escoge una Hamburguesa", new { @class = "form-control" })
+                    
+                </th>
+            </tr>
+            <tr>
+                <td>
+
+                    <input type="hidden" id="id" name="id" value="">
+                    <input type="hidden" id="ncontador" name="ncontador" value="">
+                    <h5>Nombre:      Nombre</h5>
+                    <p> Descripcion: Descripcion </p>
+                    <p> Precio:      Precio </p>
+                    <input type="submit" value="Agregar" class="btn btn-default" />
+
+                </td>
+                <td>
+                    <img src="~/assets/images/clasica.png" alt="" width="213" height="194" />
+                </td>
+
+            </tr>
+            }
+        </table>
+        <a name="tabla2"></a>
+        @* Complementos *@
+        <table class="table">
+            <tr>
+                <th colspan="3" align="center">
+                    @Html.DropDownList("Complementos", (List<SelectListItem>)ViewBag.listComp, "Escoge un Complemento", new { @class = "form-control" })
+                </th>
+            </tr>
+
+            <tr>
+
+                <td>
+
+                    <input type="hidden" id="id" name="id" value="">
+                    <input type="hidden" id="ncontador" name="ncontador" value="">
+                    <h5>Nombre:      Nombre</h5>
+                    <p> Descripcion: Descripcion </p>
+                    <p> Precio:      Precio </p>
+                    <input type="submit" value="Agregar" class="btn btn-default" />
+
+                </td>
+                <td>
+                    <img src="~/assets/images/papasfritas.png" alt="" width="213" height="194" />
+                </td>
+
+            </tr>
+
+        </table>
+
+        <a name="tabla3"> </a>
+        @* Combo *@
+        <table class="table">
+            <tr>
+                <th colspan="3" align="center">
+                    @Html.DropDownList("Combo", (List<SelectListItem>)ViewBag.listCombo, "Escoge un Combo", new { @class = "form-control" })
+                </th>
+            </tr>
+
+            <tr>
+
+                <td>
+
+                    <input type="hidden" id="id" name="id" value="">
+                    <input type="hidden" id="ncontador" name="ncontador" value="">
+                    <h5>Nombre:     Nombre</h5>
+                    <p> Descripcion: Descripcion </p>
+                    <p> Precio:      Precio </p>
+
+
+                    @using (Html.BeginForm("Agregar", "Pedido", FormMethod.Post))
+                    {
+                        
+                        <input type="submit" value="Agregar" />
+                    }
+
+                </td>
+                <td>
+                    <img src="~/assets/images/2clasicasmascheese.png" alt="" width="213" height="194" />
+                </td>
+
+            </tr>
+
+        </table>
+    </div><!--/.col-xs-12.col-sm-9-->
+<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+    <table class="table">
+        <tr>
+            <th>
+                Producto.Nombre
+            </th>
+            <th>
+                Opciones
+            </th>
+            <th></th>
+        </tr>
+        @if (listaPedidos != null)
+        {
+            foreach (var item in listaPedidos)
+            {
+                <tr>
+                    <td>@item.nombre</td>
+                </tr>
+            }
+        }
+
+    </table>
+    <input type="submit" value="Detalle" class="btn btn-default" />
+
+    <input type="submit" value="Siguiente" class="btn btn-default" />
+
+</div>
+
+

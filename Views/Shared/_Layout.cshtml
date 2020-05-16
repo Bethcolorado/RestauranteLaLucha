@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="~/assets/css/main.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Lucha - @ViewBag.Title</title>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="logo"><a href="~/">La Lucha <span> Restaurante </span></a></div>
+        <a href="#menu">Menu</a>
+    </header>
+    <!-- Nav -->
+    <nav id="menu">
+        <ul class="links">
+            <li><a href="#">Inicio</a></li>
+            <li>@Html.ActionLink("Productos", "Index", "Producto", new { area = "" }, new { @class = "navbar-brand" })</li>
+            <li>@Html.ActionLink("Empleados", "Index", "Empleado", new { area = "" }, new { @class = "navbar-brand" })</li>
+            <li>@Html.ActionLink("Pedidos", "Index", "Pedido", new { area = "" }, new { @class = "navbar-brand" })</li>
+            <li><a href="#">Sobre Nosotros</a></li>
+            <li><a href="#">Cerrar Sesion</a></li>
+            <!--
+    Nombre a la vista / Nombre de acción / Nombre del controlador
+    Html.ActionLink("Empleados", "Index", "Empleado", new { area = "" }, new { class = "navbar-brand" })
+    -->
+        </ul>
+    </nav>
+    <div class="container body-content">
+
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - La Lucha. All rights reserved - Visitanos en Calle ARCE</p>
+        </footer>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

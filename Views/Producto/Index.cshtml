@@ -1,0 +1,33 @@
+﻿@using LaLucha.Models;
+@model List<ProductoCLS>
+
+@{
+    ViewBag.Title = "Productos";
+}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>@Html.LabelFor(p=>Model[0].id)</th>
+            <th>@Html.LabelFor(p=>Model[0].nombre)</th>
+            <th>@Html.LabelFor(p=>Model[0].idTipoProducto)</th>
+            <th>@Html.LabelFor(p=>Model[0].precio)</th>
+            <th>@Html.LabelFor(p=>Model[0].descripcion)</th>
+            <th>@Html.LabelFor(p=>Model[0].imagen)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model) 
+        {
+        <tr>
+            <td>@item.id</td>
+            <td>@item.nombre</td>
+            <td>@item.idTipoProducto</td>
+            <td>@item.precio</td>
+            <td>@item.descripcion</td>
+            <td><img src="~/assets/images/@item.imagen" alt="Imagen del Producto" height="40px"/></td>
+        </tr>
+        }
+    </tbody>
+</table>
+

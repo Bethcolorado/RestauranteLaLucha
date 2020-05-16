@@ -1,0 +1,32 @@
+﻿@using LaLucha.Models
+@model List<PedidoCLS>
+@{
+    ViewBag.Title = "Pedidos";
+}
+
+<br />
+<br />
+@Html.ActionLink("Agregar Pedido", "Agregar", "Pedido")
+
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>@Html.LabelFor(p => Model[0].id)</th>
+            <th>@Html.LabelFor(p => Model[0].atendido)</th>
+            <th>@Html.LabelFor(p => Model[0].detalle)</th>
+            <th>@Html.LabelFor(p => Model[0].idEmpleado)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.id</td>
+                <td>@item.atendido</td>
+                <td>@item.detalle</td>
+                <td>@item.idEmpleado</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
